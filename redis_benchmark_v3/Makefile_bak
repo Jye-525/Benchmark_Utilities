@@ -1,0 +1,19 @@
+CFLAGS+=-std=c++11
+CFLAGS+=-fopenmp -O3
+CFLAGS+=-I/home/jye20/pkg_src/redis_bench_v3
+LDFLAGS+=/opt/ohpc/pub/software/hdevarajan/spack3/v0.15.4.scs/var/spack/environments/apollo/.spack-env/view/lib/libredis++.a
+LDFLAGS+=/opt/ohpc/pub/software/hdevarajan/spack3/v0.15.4.scs/var/spack/environments/apollo/.spack-env/view/lib/libhiredis.a
+LDFLAGS+=-lpthread -lcrypto
+MPICXX=/opt/ohpc/pub/software/hdevarajan/spack3/v0.15.4.scs/var/spack/environments/apollo/.spack-env/view/bin/mpicxx
+PWD=$(shell pwd)
+
+all: redis_cluster_bench
+
+redis_cluster_bench: redis_cluster_bench.o
+     $(MPICXX) -o $@ $^ $(CFLAGS) $(LDFLAGS)
+
+%.o: %.cpp
+     $(MPICXX) -c $(CFLAGS) $< -o $@
+
+clean:
+     rm -rf *.o redis_cluster_bench

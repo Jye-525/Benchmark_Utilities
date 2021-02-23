@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/clang++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/redis_cluster_bench.dir/redis_cluster_bench.cpp.o  -o redis_cluster_bench  -lpthread -lhiredis -lredis++ -lmpi 

@@ -1,0 +1,3 @@
+/Users/yejie/SCS_Research/Luxio/source/redis_bench_v3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yejie/SCS_Research/Luxio/source/redis_bench_v3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yejie/SCS_Research/Luxio/source/redis_bench_v3/cmake-build-debug/CMakeFiles/redis_cluster_bench.dir
