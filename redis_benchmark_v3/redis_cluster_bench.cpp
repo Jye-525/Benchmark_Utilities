@@ -21,8 +21,8 @@ using namespace sw::redis;
 #define SMALL_IO_SIZE KILO
 #define LARGE_IO_SIZE (16 * MEGA)
 
-#define SMALL_REQ_NUMS 49152 // 64MB/1KB
-#define LARGE_REQ_NUMS 3 // 64MB/16MB
+#define SMALL_REQ_NUMS 98304 // 96MB/1KB
+#define LARGE_REQ_NUMS 6 // 96MB/16MB
 
 // The number of metadata requests on each client
 #define MDM_REQ_NUMS 25000
